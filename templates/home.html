@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="post" class="buttons">
+    <h3></h3>
+    <div>
+        <label>Name~~~</label>
+        <input class ="pink" type="text" placeholder="Enter a name" name="name" value="{{name}}"/>
+    </div>
+    <div class="join">
+        <input type="text" placeholder="Room Code" name="code" value="{{code}}"/>
+        <button class="moo" type="submit" name="join">Join a room</button>
+    </div>
+    <button type="submit" name="create" class="create-btn">Create а room</button>
+
+    {% if error %}
+<br>
+        {{error}}
+
+    {% endif %}
+
+</form>
+{% endblock %}
